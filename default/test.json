@@ -25,36 +25,6 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
-      "identifier" : "53f77403-3c95-3546-aeba-466245dae549",
-      "labelIndex" : 0,
-      "loadBalanceCompression" : "DO_NOT_COMPRESS",
-      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
-      "name" : "",
-      "partitioningAttribute" : "",
-      "prioritizers" : [ ],
-      "selectedRelationships" : [ "success" ],
-      "source" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "9e0123b8-3d85-3b93-9cc7-efef19b3a85c",
-        "name" : "ListenHTTP",
-        "type" : "PROCESSOR"
-      },
-      "zIndex" : 0
-    }, {
-      "backPressureDataSizeThreshold" : "1 GB",
-      "backPressureObjectThreshold" : 10000,
-      "bends" : [ ],
-      "componentType" : "CONNECTION",
-      "destination" : {
-        "comments" : "",
-        "groupId" : "flow-contents-group",
-        "id" : "0e532861-9c57-3908-8c32-b51648acb047",
-        "name" : "InvokeHTTP",
-        "type" : "PROCESSOR"
-      },
-      "flowFileExpiration" : "0 sec",
-      "groupIdentifier" : "flow-contents-group",
       "identifier" : "6c8af7a0-af4d-36d8-a312-73713a35391e",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
