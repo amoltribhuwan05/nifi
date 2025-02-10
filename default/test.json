@@ -25,6 +25,36 @@
       },
       "flowFileExpiration" : "0 sec",
       "groupIdentifier" : "flow-contents-group",
+      "identifier" : "53f77403-3c95-3546-aeba-466245dae549",
+      "labelIndex" : 0,
+      "loadBalanceCompression" : "DO_NOT_COMPRESS",
+      "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+      "name" : "",
+      "partitioningAttribute" : "",
+      "prioritizers" : [ ],
+      "selectedRelationships" : [ "success" ],
+      "source" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "9e0123b8-3d85-3b93-9cc7-efef19b3a85c",
+        "name" : "ListenHTTP",
+        "type" : "PROCESSOR"
+      },
+      "zIndex" : 0
+    }, {
+      "backPressureDataSizeThreshold" : "1 GB",
+      "backPressureObjectThreshold" : 10000,
+      "bends" : [ ],
+      "componentType" : "CONNECTION",
+      "destination" : {
+        "comments" : "",
+        "groupId" : "flow-contents-group",
+        "id" : "0e532861-9c57-3908-8c32-b51648acb047",
+        "name" : "InvokeHTTP",
+        "type" : "PROCESSOR"
+      },
+      "flowFileExpiration" : "0 sec",
+      "groupIdentifier" : "flow-contents-group",
       "identifier" : "6c8af7a0-af4d-36d8-a312-73713a35391e",
       "labelIndex" : 0,
       "loadBalanceCompression" : "DO_NOT_COMPRESS",
@@ -408,6 +438,178 @@
       "schedulingStrategy" : "TIMER_DRIVEN",
       "style" : { },
       "type" : "org.apache.nifi.processors.standard.InvokeHTTP",
+      "yieldDuration" : "1 sec"
+    }, {
+      "autoTerminatedRelationships" : [ ],
+      "backoffMechanism" : "PENALIZE_FLOWFILE",
+      "bulletinLevel" : "WARN",
+      "bundle" : {
+        "artifact" : "nifi-standard-nar",
+        "group" : "org.apache.nifi",
+        "version" : "2.2.0"
+      },
+      "comments" : "",
+      "componentType" : "PROCESSOR",
+      "concurrentlySchedulableTaskCount" : 1,
+      "executionNode" : "ALL",
+      "groupIdentifier" : "flow-contents-group",
+      "identifier" : "9e0123b8-3d85-3b93-9cc7-efef19b3a85c",
+      "maxBackoffPeriod" : "10 mins",
+      "name" : "ListenHTTP",
+      "penaltyDuration" : "30 sec",
+      "position" : {
+        "x" : 352.0,
+        "y" : -48.0
+      },
+      "properties" : {
+        "authorized-issuer-dn-pattern" : ".*",
+        "multipart-request-max-size" : "1 MB",
+        "Request Header Maximum Size" : "8 KB",
+        "HTTP Protocols" : "HTTP_1_1",
+        "Authorized DN Pattern" : ".*",
+        "max-thread-pool-size" : "200",
+        "Base Path" : "contentListener",
+        "multipart-read-buffer-size" : "512 KB",
+        "Max Unconfirmed Flowfile Time" : "60 secs",
+        "client-authentication" : "AUTO",
+        "Return Code" : "200"
+      },
+      "propertyDescriptors" : {
+        "authorized-issuer-dn-pattern" : {
+          "displayName" : "Authorized Issuer DN Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "authorized-issuer-dn-pattern",
+          "sensitive" : false
+        },
+        "multipart-request-max-size" : {
+          "displayName" : "Multipart Request Max Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "multipart-request-max-size",
+          "sensitive" : false
+        },
+        "record-writer" : {
+          "displayName" : "Record Writer",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-writer",
+          "sensitive" : false
+        },
+        "Request Header Maximum Size" : {
+          "displayName" : "Request Header Maximum Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Request Header Maximum Size",
+          "sensitive" : false
+        },
+        "HTTP Protocols" : {
+          "displayName" : "HTTP Protocols",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HTTP Protocols",
+          "sensitive" : false
+        },
+        "HTTP Headers to receive as Attributes (Regex)" : {
+          "displayName" : "HTTP Headers to receive as Attributes (Regex)",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "HTTP Headers to receive as Attributes (Regex)",
+          "sensitive" : false
+        },
+        "health-check-port" : {
+          "displayName" : "Listening Port for Health Check Requests",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "health-check-port",
+          "sensitive" : false
+        },
+        "Authorized DN Pattern" : {
+          "displayName" : "Authorized Subject DN Pattern",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Authorized DN Pattern",
+          "sensitive" : false
+        },
+        "max-thread-pool-size" : {
+          "displayName" : "Maximum Thread Pool Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "max-thread-pool-size",
+          "sensitive" : false
+        },
+        "Base Path" : {
+          "displayName" : "Base Path",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Base Path",
+          "sensitive" : false
+        },
+        "multipart-read-buffer-size" : {
+          "displayName" : "Multipart Read Buffer Size",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "multipart-read-buffer-size",
+          "sensitive" : false
+        },
+        "SSL Context Service" : {
+          "displayName" : "SSL Context Service",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "SSL Context Service",
+          "sensitive" : false
+        },
+        "Max Unconfirmed Flowfile Time" : {
+          "displayName" : "Max Unconfirmed Flowfile Time",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Unconfirmed Flowfile Time",
+          "sensitive" : false
+        },
+        "Max Data to Receive per Second" : {
+          "displayName" : "Max Data to Receive per Second",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Max Data to Receive per Second",
+          "sensitive" : false
+        },
+        "client-authentication" : {
+          "displayName" : "Client Authentication",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "client-authentication",
+          "sensitive" : false
+        },
+        "Return Code" : {
+          "displayName" : "Return Code",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Return Code",
+          "sensitive" : false
+        },
+        "record-reader" : {
+          "displayName" : "Record Reader",
+          "dynamic" : false,
+          "identifiesControllerService" : true,
+          "name" : "record-reader",
+          "sensitive" : false
+        },
+        "Listening Port" : {
+          "displayName" : "Listening Port",
+          "dynamic" : false,
+          "identifiesControllerService" : false,
+          "name" : "Listening Port",
+          "sensitive" : false
+        }
+      },
+      "retriedRelationships" : [ ],
+      "retryCount" : 10,
+      "runDurationMillis" : 0,
+      "scheduledState" : "ENABLED",
+      "schedulingPeriod" : "0 sec",
+      "schedulingStrategy" : "TIMER_DRIVEN",
+      "style" : { },
+      "type" : "org.apache.nifi.processors.standard.ListenHTTP",
       "yieldDuration" : "1 sec"
     } ],
     "remoteProcessGroups" : [ ],
